@@ -2,6 +2,7 @@
 Tests for the utility functions from :mod:`simpy.util`.
 
 """
+
 import pytest
 
 from simpy import Interrupt

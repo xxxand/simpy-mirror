@@ -2,6 +2,7 @@
 Test asynchronous interrupts.
 
 """
+
 import re
 
 import pytest

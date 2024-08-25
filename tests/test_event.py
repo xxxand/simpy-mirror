@@ -2,6 +2,7 @@
 Tests for ``simpy.events.Event``.
 
 """
+
 # Pytest gets the parameters "env" and "log" from the *conftest.py* file
 import re
 

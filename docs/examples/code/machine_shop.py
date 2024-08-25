@@ -15,6 +15,7 @@ Scenario:
   with the machine repair. The workshop works continuously.
 
 """
+
 import random
 
 import simpy

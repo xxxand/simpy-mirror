@@ -2,6 +2,7 @@
 General test for the `simpy.core.Environment`.
 
 """
+
 # Pytest gets the parameters "env" and "log" from the *conftest.py* file
 import pytest
 

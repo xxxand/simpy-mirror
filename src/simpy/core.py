@@ -2,6 +2,7 @@
 Core components for event-discrete simulation environments.
 
 """
+
 from __future__ import annotations
 
 from heapq import heappop, heappush

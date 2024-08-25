@@ -2,6 +2,7 @@
 Theses test cases demonstrate the API for shared resources.
 
 """
+
 # Pytest gets the parameters "env" and "log" from the *conftest.py* file
 import pytest
 

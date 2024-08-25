@@ -13,6 +13,7 @@ used, there are several specialized subclasses of it.
     ~simpy.events.AllOf
 
 """
+
 from __future__ import annotations
 
 from typing import (

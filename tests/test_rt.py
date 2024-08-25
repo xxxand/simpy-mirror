@@ -2,6 +2,7 @@
 Tests for SimPy's real-time behavior.
 
 """
+
 from time import monotonic, sleep
 
 import pytest

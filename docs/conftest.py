@@ -10,6 +10,7 @@ a separate process. The output of this process is compared to the
 contents of the ``*.out`` file.
 
 """
+
 import pathlib
 import subprocess
 import sys
