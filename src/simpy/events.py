@@ -172,7 +172,7 @@ class Event:
         """Set the event's value, mark it as successful and schedule it for
         processing by the environment. Returns the event instance.
 
-        Raises :exc:`RuntimeError` if this event has already been triggerd.
+        Raises :exc:`RuntimeError` if this event has already been triggered.
 
         """
         if self._value is not PENDING:
