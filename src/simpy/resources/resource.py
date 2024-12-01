@@ -277,7 +277,7 @@ class PreemptiveResource(PriorityResource):
     ) -> None:
         if len(self.users) >= self.capacity and event.preempt:
             # Check if we can preempt another process
-            preempt = sorted(self.users, key=lambda e: e.key)[-1]
+            preempt = max(self.users, key=lambda e: e.key)
             if preempt.key > event.key:
                 self.users.remove(preempt)
                 preempt.proc.interrupt(  # type: ignore
