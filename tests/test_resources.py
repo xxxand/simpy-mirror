@@ -508,7 +508,7 @@ def test_container_init_capacity(env, error, args):
 
 
 #
-# Tests fore Store
+# Tests for Store
 #
 
 
