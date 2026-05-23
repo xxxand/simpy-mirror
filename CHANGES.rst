@@ -1,6 +1,23 @@
 Changelog for SimPy
 ===================
 
+4.1.2 - 2026-05-23
+------------------
+
+- [NEW] Support Python 3.13 and 3.14
+- [FIX] Allow PEP 657 location underlines in ``test_exception_chaining`` so
+  the test passes on Python 3.11+
+- [FIX] Update ``docs/conftest.py`` to import ``TerminalRepr`` from
+  ``_pytest._code.code`` and use the ``file_path`` collection hook,
+  replacing the removed ``py._code`` import and deprecated ``py.path.local``
+  hook argument
+- [FIX] Explicitly mark ``ConditionValue`` as unhashable
+- [CHANGE] Address current ruff and mypy findings: switch tests to use
+  ``pytest.raises`` as a context manager, mark regex ``match=`` patterns as
+  raw strings, hoist module-level imports, and extend the ruff ignore list
+  with ``UP045`` (matches the existing ``UP006``/``UP007`` policy)
+
+
 4.1.1 - 2023-11-12
 ------------------
 
