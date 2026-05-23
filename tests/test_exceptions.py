@@ -135,6 +135,9 @@ def test_exception_chaining(env):
             .replace(r'\{path\}', r'.*')
         )
 
+        # Allow optional PEP 657 (Python 3.11+) caret/tilde underline lines.
+        expected = expected.replace('\n', '\n' + r'(?:[ \t]+[~^]+\n)?')
+
         if platform.system() == 'Windows':
             expected = expected.replace(r'\/', r'\\')
 
