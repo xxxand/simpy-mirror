@@ -11,7 +11,6 @@ contents of the ``*.out`` file.
 
 """
 
-import pathlib
 import subprocess
 import sys
 from typing import ClassVar
