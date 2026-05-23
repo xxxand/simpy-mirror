@@ -80,7 +80,7 @@ def test_unavailable_value(env):
     trying to access it will result in a AttributeError."""
     event = env.event()
 
-    with pytest.raises(AttributeError, match='.* is not yet available$'):
+    with pytest.raises(AttributeError, match=r'.* is not yet available$'):
         _ = event.value
 
 

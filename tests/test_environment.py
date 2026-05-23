@@ -72,7 +72,8 @@ def test_run_with_processed_event(env):
 
 
 def test_run_with_untriggered_event(env):
-    excinfo = pytest.raises(RuntimeError, env.run, until=env.event())
+    with pytest.raises(RuntimeError) as excinfo:
+        env.run(until=env.event())
     assert str(excinfo.value).startswith(
         'No scheduled events left but "until" event was not triggered:'
     )

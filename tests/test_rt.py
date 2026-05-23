@@ -65,7 +65,8 @@ def test_rt_slow_sim_default_behavior(log):
     env = RealtimeEnvironment(factor=0.05)
     env.process(process(env, log, 0.1, 1))
 
-    err = pytest.raises(RuntimeError, env.run, 3)
+    with pytest.raises(RuntimeError) as err:
+        env.run(3)
     assert 'Simulation too slow for real time' in str(err.value)
     assert log == []
 
@@ -104,7 +105,8 @@ def test_rt_sync(log):
 
 def test_run_with_untriggered_event(env):
     env = RealtimeEnvironment(factor=0.05)
-    excinfo = pytest.raises(RuntimeError, env.run, until=env.event())
+    with pytest.raises(RuntimeError) as excinfo:
+        env.run(until=env.event())
     assert str(excinfo.value).startswith(
         'No scheduled events left but "until" event was not triggered:'
     )
