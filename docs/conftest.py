@@ -17,15 +17,15 @@ import sys
 from typing import ClassVar
 
 import pytest
+from _pytest._code.code import TerminalRepr
 from _pytest.assertion.util import _diff_text
-from py._code.code import TerminalRepr
 
 
-def pytest_collect_file(path, parent):
+def pytest_collect_file(file_path, parent):
     """Checks if the file is a rst file and creates an
     :class:`ExampleFile` instance."""
-    if path.ext == '.py' and path.dirname.endswith('code'):
-        return ExampleFile.from_parent(parent, path=pathlib.Path(path.strpath))
+    if file_path.suffix == '.py' and file_path.parent.name == 'code':
+        return ExampleFile.from_parent(parent, path=file_path)
     else:
         return None
 
